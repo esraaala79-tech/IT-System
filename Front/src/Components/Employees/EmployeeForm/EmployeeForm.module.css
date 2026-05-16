@@ -1,0 +1,13 @@
+body{
+    background-color: var(--greycolor);
+}
+.btngrey{
+    background-color: var(--bluegreycolor) ;
+    color: white;
+    
+}
+.btngrey:hover{
+    background-color: #206ab4;
+    color: white;
+    transition: background-color .75s;
+}
