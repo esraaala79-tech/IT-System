@@ -1,5 +1,6 @@
 import React from "react";
 import styles from "./RegisterForm.module.css";
+import { Link } from "react-router-dom";
 
 function RegisterForm() {
   return (
@@ -57,9 +58,9 @@ function RegisterForm() {
             </div>
 
             <div className="d-flex justify-content-end gap-2 mt-4">
-              <button type="button" className="btn btn-outline-primary px-4">
+              <Link to="/employees" className="btn btn-outline-primary px-4">
                 CANCEL
-              </button>
+              </Link>
 
               <button type="submit" className="btn btn-primary px-4">
                 CREATE ACCOUNT

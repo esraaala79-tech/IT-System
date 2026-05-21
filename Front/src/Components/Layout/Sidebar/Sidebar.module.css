@@ -1,0 +1,19 @@
+.active{
+ color: var(--secondary) !important;
+ background-color:rgb(239, 246, 255)!important;
+ text-decoration: none;
+}
+
+.inActive{
+ color: rgba(33, 37, 41, 0.75);
+}
+
+.sideNav{
+ width: 15rem;
+}
+.NavLink{
+ padding: 10px 20px;
+}
+.NavLink:hover{
+ background-color:rgb(239, 246, 255);
+}

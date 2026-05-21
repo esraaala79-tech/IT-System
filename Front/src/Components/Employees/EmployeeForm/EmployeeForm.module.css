@@ -1,0 +1,31 @@
+body{
+ background-color: var(--greycolor);
+}
+.btngrey{
+ background-color: var(--bluegreycolor) ;
+ color: white;
+ 
+}
+.btngrey:hover{
+ background-color: #206ab4;
+ color: white;
+ transition: background-color .75s;
+}
+.btngrey:active{
+ background-color: #206ab4;
+ color: white;
+}
+
+.uploadBox{
+ background-color: #7b7f86;
+ color: white;
+ padding: 12px 20px;
+ border-radius: 10px;
+ cursor: pointer;
+ display: inline-block;
+ transition: 0.3s;
+}
+
+.uploadBox:hover{
+ background-color: #7a476e;
+}

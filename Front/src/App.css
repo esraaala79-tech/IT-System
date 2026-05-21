@@ -1,0 +1,7 @@
+:root{
+ --greycolor: #f3f0f0;
+ --bluegreycolor: #007BA7;
+ 
+ --background-color: var(--greycolor);
+
+}
