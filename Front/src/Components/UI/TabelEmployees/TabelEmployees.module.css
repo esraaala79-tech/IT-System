@@ -1,0 +1,28 @@
+.grayBackground{
+background-color:#f0f0f1 !important;
+
+
+
+}
+.btn{
+text-decoration: none;
+margin-top: 4px!important;
+
+
+}
+.icon{
+margin-top: 5px !important;
+
+
+}
+.head1 th{
+ background-color: #e5e5e5 !important;
+ padding: 12px;
+}
+.role{
+ background-color: #035422 !important;
+
+ color:#ffffff !important;
+ border: none !important;
+ padding: 6px 14px !important;
+}
