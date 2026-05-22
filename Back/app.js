@@ -13,11 +13,13 @@ connectedDB();
 const authRoute = require("./routes/authRoutes");
 const adminRoute = require("./routes/adminRoute");
 const ticketRoutes = require("./routes/ticketRoutes");
+const erroeHandling = require("./middleware/errorHandlingMiddleware")
 
 // API routes
 app.use("/api/auth", authRoute);
 app.use("/api/admin", adminRoute);
 app.use("/api/tickets", ticketRoutes);
+app.use(erroeHandling)
 
 // test route
 app.get("/", (req, res) => {

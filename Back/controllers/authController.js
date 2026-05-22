@@ -21,13 +21,13 @@ const login = async (req, res) => {
  if (!exist) {
  return res.status(400).json({ msg: "user already exist" })
  }
- const match = await bcrypt.compare(passwored, user.passwored)
+ const match = await bcrypt.compare(passwored, exist.passwored)
  if (!match) {
  return res.status(400).json({ msg: "invaliad passwored " })
  }
  const token = jwt.sign({
- id: user._id,
- role: user.role
+ id: exist._id,
+ role: exist.role
 
  },
  process.env.JWT_SK,
@@ -39,7 +39,7 @@ const login = async (req, res) => {
  return res.status(200).json({
  msg: "Login successful",
  token,
- user,
+ exist,
  })
 
  } catch (err) {
@@ -47,4 +47,21 @@ const login = async (req, res) => {
  }
 }
 
- module.exports = login
+const UpdatePassword= async (req,res)=>{
+    const findUser = await user.findById(req.params.id);
+    if(!findUser){
+        res.state(404).json({Message:"the is not found"})
+    }
+    // change when bcryte function is added
+    findUser.password = req.body.password;
+
+    await findUser.save();
+
+    res.status(200).json({
+        Message:"User's Password was updated"
+    })
+
+}
+
+
+ module.exports = {login, UpdatePassword}
