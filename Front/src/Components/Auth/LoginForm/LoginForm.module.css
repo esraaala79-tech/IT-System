@@ -1,0 +1,96 @@
+.leftSide {
+  height: 100vh;
+}
+
+.bgImage {
+  filter: brightness(0.8);
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(255, 255, 255, 0.45);
+}
+
+.leftContent {
+  width: 75%;
+}
+
+.logo {
+  width: 90px;
+  height: 90px;
+  object-fit: cover;
+  border-radius: 20px;
+  margin-bottom: 25px;
+}
+
+.title {
+  color: #111827;
+  margin-bottom: 15px;
+}
+
+.description {
+  color: #374151;
+  font-size: 15px;
+  max-width: 420px;
+  margin: auto;
+}
+
+.rightSide {
+  background-color: white;
+}
+
+.formContainer {
+  width: 420px;
+}
+
+.label {
+  font-size: 12px;
+  font-weight: 700;
+  color: #6b7280;
+  margin-bottom: 8px;
+
+}
+
+.input {
+  border-color: #d1d5db;
+}
+
+.input:focus {
+  border-color: #2563eb;
+}
+
+.icon {
+  color: #6b7280;
+}
+
+.forgot {
+  font-size: 13px;
+  text-decoration: none;
+}
+
+.remember {
+  font-size: 14px;
+  color: #6b7280;
+}
+
+.button {
+  padding: 12px;
+  font-weight: 700;
+  border-radius: 8px;
+}
+
+.footer {
+  text-align: center;
+  margin-top: 45px;
+  padding-top: 25px;
+  border-top: 1px solid #e5e7eb;
+}
+
+.contact {
+  margin-left: 5px;
+  text-decoration: none;
+}

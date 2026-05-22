@@ -9,7 +9,10 @@ export default function AdminLayout() {
       <Navbar />
       <div className='d-flex'>
         <Sidebar />
-        <Outlet />
+        <div className='flex-grow-1'>
+          <Outlet />
+
+        </div>
 
       </div>
 
