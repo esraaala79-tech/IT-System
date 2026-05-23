@@ -24,7 +24,6 @@ app.use("/api/auth", authRoute);
 app.use("/api/admin", adminRoute);
 app.use("/api/tickets", ticketRoutes);
 
-// 2. تفعيل المسار تحت مع باقي الـ app.use
 app.use("/api", reportsRoutes);
 // test route
 app.get("/", (req, res) => {
