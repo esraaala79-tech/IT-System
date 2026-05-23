@@ -1,5 +1,7 @@
 require("dotenv").config();
 
+console.log("ENV TEST:", process.env.DB_URL);
+
 const express = require("express");
 const app = express();
 
@@ -14,10 +16,13 @@ const authRoute = require("./routes/authRoutes");
 const adminRoute = require("./routes/adminRoute");
 const ticketRoutes = require("./routes/ticketRoutes");
 
+
 // API routes
 app.use("/api/auth", authRoute);
 app.use("/api/admin", adminRoute);
 app.use("/api/tickets", ticketRoutes);
+app.use("/api",ticketRoutes)
+
 
 // test route
 app.get("/", (req, res) => {
@@ -29,3 +34,4 @@ const port = process.env.PORT || 3000;
 app.listen(port, () => {
   console.log(`Server is running on port ${port}`);
 });
+console.log("DB_URL =", process.env.DB_URL);

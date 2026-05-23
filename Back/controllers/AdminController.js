@@ -4,7 +4,7 @@ const bcrypt = require("bcrypt");
 // add user
 const addUser = async (req, res) => {
   try {
-    const { name, email, password, role } = req.body;
+    const { name, email, password } = req.body;
 
     // check if user exists
     const existUser = await User.findOne({ email });
@@ -16,20 +16,20 @@ const addUser = async (req, res) => {
     // hash password
     const hashedPassword = await bcrypt.hash(password, 10);
 
-    // create user
+    // create user (force role = user)
     const newUser = await User.create({
       name,
       email,
       password: hashedPassword,
-      role: role || "user",
+      role: "user",
     });
 
     // remove password from response
-    const safeUser = await User.findById(newUser._id).select("-password");
+    newUser.password = undefined;
 
     return res.status(201).json({
       message: "User created successfully",
-      user: safeUser,
+      user: newUser,
     });
 
   } catch (error) {

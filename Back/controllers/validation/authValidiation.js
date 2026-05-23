@@ -1,8 +1,8 @@
-const joi =require("joi")
+const joi = require("joi");
 
+const loginSchema = joi.object({
+  email: joi.string().email().required(),
+  password: joi.string().required(),
+});
 
-const loginSchema=joi.object({
- name:joi.string().min(3).max(20),
- email:joi.string().email().required(),
- passwored:joi.string().required(),
-})
+module.exports = loginSchema;

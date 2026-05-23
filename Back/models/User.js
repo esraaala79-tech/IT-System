@@ -11,7 +11,7 @@ email:{
  unique:true
 
 },
-passwored:{
+password:{
  type:String,
  required:true,
 
