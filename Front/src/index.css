@@ -3,5 +3,13 @@
 }
 
 body{
-    font-family: 'Inter', sans-serif;;
+    font-family: 'Inter', sans-serif;
+}
+
+.w-40{
+    width: 40%;
+}
+
+.normal-font{
+    font-size: 16px;
 }

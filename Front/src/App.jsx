@@ -8,28 +8,25 @@ import Employees from "./Pages/Admin/Employees";
 import EmployeeDashboard from "./Pages/Employee/EmployeeDashboard/EmployeeDashboard"
 import TabelEmployees from "./Components/UI/TabelEmployees/TabelEmployees";
 import AddEmployee from "./Pages/Admin/AddEmployee"
-// import Settings from "./Pages/Admin/Settings";
+import Settings from "./Pages/Admin/Settings";
 
 function App() {
   return (
     <>
       <Routes>
         <Route element={<AdminLayout />}>
-          <Route path='/' element={<AdminDashboard />} />
-          <Route path='/tickets' element={<Tickets />} />
-          <Route path='/reports' element={<Reports />} />
-          <Route path='/employees' element={<Employees />} />
-          {/* <Route path='/settings' element={<Settings />} /> */}
+          <Route path="/" element={<AdminDashboard />} />
+          <Route path="/tickets" element={<Tickets />} />
+          <Route path="/reports" element={<Reports />} />
+          <Route path="/employees" element={<Employees />} >
+
+
+            {/* second child */}
+            <Route path="add" element={<AddEmployee />} />
+          </Route>
+          <Route path="/settings" element={<Settings />} />
         </Route>
       </Routes>
-
-
-      {/* second child */}
-      <Route path="add" element={<AddEmployee />} />
-    </Route >
-      {/* <Route path="/settings" element={<Settings />} /> */ }
-        </Route >
-      </Routes >
     </>
   );
 }
